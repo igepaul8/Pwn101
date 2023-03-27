@@ -19,8 +19,8 @@ def start(argv=[], *a, **kw):
     if args.GDB:
         return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
     else:
-        return remote('10.10.213.81', 9002)
-        #return process([exe] + argv, *a, **kw)
+        #return remote('<thm ip>', 9002)
+        return process([exe] + argv, *a, **kw)
 
 # Specify your GDB script here for debugging
 # GDB will be launched if the exploit is run via e.g.
